@@ -1,5 +1,20 @@
 import sqlite3 as sq
 import pandas as pd
+import tkinter as tk
+from tkinter import filedialog
+
+def input_folder_select(input):
+    root = tk.Tk()
+    root.withdraw()
+    input_directory = filedialog.askdirectory(title=input)
+    return input_directory
+
+
+def output_folder_select(input):
+    root = tk.Tk()
+    root.withdraw()
+    output_excel = filedialog.askdirectory(title=input) + '/processed_file.xlsx'  
+    return output_excel
 
 def dbparser(input):
     con = sq.connect(input)
