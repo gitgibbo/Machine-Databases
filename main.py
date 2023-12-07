@@ -1,9 +1,16 @@
-from functions import dbparser, get_serial
+from functions import dbparser, get_serial, input_folder_select, output_folder_select
 import os
 import pandas as pd
 
-input_directory = 'input'
-output_excel = 'output/processed_data.xlsx'  # Specify the output Excel file path
+
+
+
+ # Specify the output Excel file path
+ 
+input_directory = input_folder_select('Select an Input Folder')
+
+output_excel = output_folder_select('Select an Output folder')
+
 
 # Create an Excel writer
 with pd.ExcelWriter(output_excel, engine='xlsxwriter') as writer:
