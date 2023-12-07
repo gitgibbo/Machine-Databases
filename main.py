@@ -1,9 +1,14 @@
 from functions import dbparser, get_serial
 import os
 import pandas as pd
+import tkinter as tk
+from tkinter import filedialog
 
-input_directory = 'input'
-output_excel = 'output/processed_data.xlsx'  # Specify the output Excel file path
+root = tk.Tk()
+root.withdraw()
+# Select the input and output folders
+input_directory = filedialog.askdirectory(title='Select Input Folder')
+output_excel = filedialog.askdirectory(title='Select Output Folder') + '/processed_file.xlsx'  
 
 # Create an Excel writer
 with pd.ExcelWriter(output_excel, engine='xlsxwriter') as writer:
