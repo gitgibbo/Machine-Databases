@@ -16,7 +16,6 @@ def output_folder_select(input):
     output_excel = filedialog.askdirectory(title=input) + '/processed_file.xlsx'  
     return output_excel
 
-
 def dbparser(input):
     con = sq.connect(input)
     cur = con.cursor()

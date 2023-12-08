@@ -4,9 +4,9 @@ import pandas as pd
 
 
 
+# Select the input and output folders
 
- # Specify the output Excel file path
- 
+
 input_directory = input_folder_select('Select an Input Folder')
 
 output_excel = output_folder_select('Select an Output folder')
