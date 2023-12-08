@@ -11,6 +11,7 @@ input_directory = input_folder_select('Select an Input Folder')
 
 output_excel = output_folder_select('Select an Output folder')
 
+
 # Create an Excel writer
 with pd.ExcelWriter(output_excel, engine='xlsxwriter') as writer:
     for filename in os.listdir(input_directory):
